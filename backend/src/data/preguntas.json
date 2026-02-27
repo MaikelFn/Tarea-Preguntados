@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿Cuál es la capital de Francia?",
+    "respuestas": [
+      { "texto": "París", "correcto": true },
+      { "texto": "Lyon", "correcto": false },
+      { "texto": "Marsella", "correcto": false }
+    ]
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Cuántos continentes hay en la Tierra?",
+    "respuestas": [
+      { "texto": "5", "correcto": false },
+      { "texto": "7", "correcto": true },
+      { "texto": "6", "correcto": false }
+    ]
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Cuál es el planeta más grande del sistema solar?",
+    "respuestas": [
+      { "texto": "Saturno", "correcto": false },
+      { "texto": "Júpiter", "correcto": true },
+      { "texto": "Neptuno", "correcto": false }
+    ]
+  },
+  {
+    "id": 4,
+    "pregunta": "¿En qué año comenzó la Segunda Guerra Mundial?",
+    "respuestas": [
+      { "texto": "1939", "correcto": true },
+      { "texto": "1941", "correcto": false },
+      { "texto": "1937", "correcto": false }
+    ]
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Quién fue el primer presidente de los Estados Unidos?",
+    "respuestas": [
+      { "texto": "Thomas Jefferson", "correcto": false },
+      { "texto": "George Washington", "correcto": true },
+      { "texto": "John Adams", "correcto": false }
+    ]
+  },
+  {
+    "id": 6,
+    "pregunta": "¿Cuál es el río más largo del mundo?",
+    "respuestas": [
+      { "texto": "Amazonas", "correcto": false },
+      { "texto": "Nilo", "correcto": true },
+      { "texto": "Yangtse", "correcto": false }
+    ]
+  },
+  {
+    "id": 7,
+    "pregunta": "¿Cuántos lados tiene un hexágono?",
+    "respuestas": [
+      { "texto": "5", "correcto": false },
+      { "texto": "6", "correcto": true },
+      { "texto": "7", "correcto": false }
+    ]
+  },
+  {
+    "id": 8,
+    "pregunta": "¿Cuál es el elemento químico con símbolo Au?",
+    "respuestas": [
+      { "texto": "Plata", "correcto": false },
+      { "texto": "Oro", "correcto": true },
+      { "texto": "Aluminio", "correcto": false }
+    ]
+  },
+  {
+    "id": 9,
+    "pregunta": "¿En qué país se encuentra la Torre de Pisa?",
+    "respuestas": [
+      { "texto": "Italia", "correcto": true },
+      { "texto": "Francia", "correcto": false },
+      { "texto": "España", "correcto": false }
+    ]
+  },
+  {
+    "id": 10,
+    "pregunta": "¿Cuál es la velocidad de la luz?",
+    "respuestas": [
+      { "texto": "300,000 km/s", "correcto": true },
+      { "texto": "150,000 km/s", "correcto": false },
+      { "texto": "500,000 km/s", "correcto": false }
+    ]
+  },
+  {
+    "id": 11,
+    "pregunta": "¿Cuántos huesos tiene el cuerpo humano adulto?",
+    "respuestas": [
+      { "texto": "186", "correcto": false },
+      { "texto": "206", "correcto": true },
+      { "texto": "226", "correcto": false }
+    ]
+  },
+  {
+    "id": 12,
+    "pregunta": "¿Cuál es el océano más grande del mundo?",
+    "respuestas": [
+      { "texto": "Atlántico", "correcto": false },
+      { "texto": "Pacífico", "correcto": true },
+      { "texto": "Índico", "correcto": false }
+    ]
+  },
+  {
+    "id": 13,
+    "pregunta": "¿Cuál es el animal terrestre más rápido?",
+    "respuestas": [
+      { "texto": "Leona", "correcto": false },
+      { "texto": "Guepardo", "correcto": true },
+      { "texto": "Halcón peregrino", "correcto": false }
+    ]
+  },
+  {
+    "id": 14,
+    "pregunta": "¿Cuántos colores tiene el arco iris?",
+    "respuestas": [
+      { "texto": "5", "correcto": false },
+      { "texto": "7", "correcto": true },
+      { "texto": "6", "correcto": false }
+    ]
+  },
+  {
+    "id": 15,
+    "pregunta": "¿Cuál es la montaña más alta del mundo?",
+    "respuestas": [
+      { "texto": "K2", "correcto": false },
+      { "texto": "Monte Everest", "correcto": true },
+      { "texto": "Kilimanjaro", "correcto": false }
+    ]
+  },
+  {
+    "id": 16,
+    "pregunta": "¿En qué año se firmó la Declaración de Independencia de EE.UU.?",
+    "respuestas": [
+      { "texto": "1775", "correcto": false },
+      { "texto": "1776", "correcto": true },
+      { "texto": "1777", "correcto": false }
+    ]
+  },
+  {
+    "id": 17,
+    "pregunta": "¿Cuál es el gas más abundante en la atmósfera terrestre?",
+    "respuestas": [
+      { "texto": "Oxígeno", "correcto": false },
+      { "texto": "Nitrógeno", "correcto": true },
+      { "texto": "Dióxido de carbono", "correcto": false }
+    ]
+  },
+  {
+    "id": 18,
+    "pregunta": "¿Cuál es la capital de Japón?",
+    "respuestas": [
+      { "texto": "Osaka", "correcto": false },
+      { "texto": "Tokio", "correcto": true },
+      { "texto": "Kioto", "correcto": false }
+    ]
+  },
+  {
+    "id": 19,
+    "pregunta": "¿Cuántas veces late el corazón por minuto en promedio?",
+    "respuestas": [
+      { "texto": "50-60", "correcto": false },
+      { "texto": "60-100", "correcto": true },
+      { "texto": "100-120", "correcto": false }
+    ]
+  },
+  {
+    "id": 20,
+    "pregunta": "¿Cuál es el idioma más hablado en el mundo?",
+    "respuestas": [
+      { "texto": "Inglés", "correcto": false },
+      { "texto": "Mandarín", "correcto": true },
+      { "texto": "Español", "correcto": false }
+    ]
+  },
+  {
+    "id": 21,
+    "pregunta": "¿En qué continente se encuentra Egipto?",
+    "respuestas": [
+      { "texto": "Asia", "correcto": false },
+      { "texto": "África", "correcto": true },
+      { "texto": "Europa", "correcto": false }
+    ]
+  },
+  {
+    "id": 22,
+    "pregunta": "¿Cuál es el libro más vendido en la historia?",
+    "respuestas": [
+      { "texto": "Don Quijote", "correcto": false },
+      { "texto": "La Biblia", "correcto": true },
+      { "texto": "Harry Potter", "correcto": false }
+    ]
+  },
+  {
+    "id": 23,
+    "pregunta": "¿Cuántos lados tiene un triángulo?",
+    "respuestas": [
+      { "texto": "2", "correcto": false },
+      { "texto": "3", "correcto": true },
+      { "texto": "4", "correcto": false }
+    ]
+  },
+  {
+    "id": 24,
+    "pregunta": "¿Cuál es el país más poblado del mundo?",
+    "respuestas": [
+      { "texto": "India", "correcto": false },
+      { "texto": "China", "correcto": true },
+      { "texto": "Indonesia", "correcto": false }
+    ]
+  },
+  {
+    "id": 25,
+    "pregunta": "¿En qué año cayó el Muro de Berlín?",
+    "respuestas": [
+      { "texto": "1987", "correcto": false },
+      { "texto": "1989", "correcto": true },
+      { "texto": "1991", "correcto": false }
+    ]
+  }
+]
