@@ -24,6 +24,7 @@ const obtenerPreguntas = (list) => {
 
 app.get("/preguntas", (req, res) => {
     res.json(obtenerPreguntas(preguntas));
+    connsole.log("Preguntas enviadas");
 });
 
 app.listen(PORT);
