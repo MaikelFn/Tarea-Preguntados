@@ -1,19 +1,35 @@
-import { useEffect } from "react";
+import { useState } from "react";
+import Inicio from "./Paginas/Inicio";
+import Juego from "./Paginas/Juego";
+import Historial from "./Paginas/Historial";
 
 function App() {
-  useEffect(() => {
-    fetch("http://localhost:3000/")
-      .then(res => res.json())
-      .then(data => {
-        console.log("Respuesta:", data);
-      });
-  }, []);
+  const [paginaActual, setPaginaActual] = useState("inicio");
+  const [nombre, setNombre] = useState("");
 
-  return (
-    <div>
-      <h1>Hola Mundo</h1>
-    </div>
-  );
+  const cambiarPagina = (pagina) => {
+    setPaginaActual(pagina);
+  };
+
+  if (paginaActual === "inicio") {
+    return (
+      <Inicio
+        nombre={nombre}
+        setNombre={setNombre}
+        cambiarPagina={cambiarPagina}
+      />
+    );
+  }
+
+  if (paginaActual === "juego") {
+    return <Juego nombre={nombre} cambiarPagina={cambiarPagina} />;
+  }
+
+  if (paginaActual === "historial") {
+    return <Historial cambiarPagina={cambiarPagina} />;
+  }
+
+  return null;
 }
 
 export default App;
