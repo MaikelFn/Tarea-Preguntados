@@ -40,9 +40,15 @@ app.get("/preguntas", (req, res) => {
     console.log("Preguntas enviadas");
 });
 
-app.get("/probar-historial", async (req, res) => {
-    await guardarHistorial("JugadorPrueba", 7, "ganado");
+app.get("/historial", (req, res) => {
     res.json(historial);
+    console.log("Historial enviado");
+});
+
+app.post("/guardar-historial", express.json(), async (req, res) => {
+    const { nombreJugador, aciertos, estado } = req.body;
+    await guardarHistorial(nombreJugador, aciertos, estado);
+    res.json({ message: "Historial guardado correctamente" });
 });
 
 app.listen(PORT);

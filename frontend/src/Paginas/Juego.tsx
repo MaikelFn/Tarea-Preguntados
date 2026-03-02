@@ -13,6 +13,7 @@ type Pregunta = {
 }
 
 type JuegoProps = {
+	nombre: string;
 	cambiarPagina: (pagina: string) => void;
 }
 
@@ -21,6 +22,24 @@ export default function Juego(props: JuegoProps) {
 	const [indice, setIndice] = useState(0);
 	const [RespuestasCorrectas, setRespuestasCorrectas] = useState(0);
 	const [juegoTerminado, setJuegoTerminado] = useState(false);
+
+	const enviarHistorial = (aciertos: number) => {
+		let estado = "perdido";
+		if (aciertos >= 5) {
+			estado = "ganado";
+		}
+		fetch("http://localhost:3000/guardar-historial", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({
+				nombreJugador: props.nombre,
+				aciertos: aciertos,
+				estado: estado
+			})
+		});
+	};
 
 	useEffect(() => {
 		fetch("http://localhost:3000/preguntas")
@@ -39,13 +58,16 @@ export default function Juego(props: JuegoProps) {
 	}));
 
 	const RespuestaSeleccionada = (esCorrecto: boolean) => {
+		let aciertos = RespuestasCorrectas;
 		if (esCorrecto) {
-			setRespuestasCorrectas(prev => prev + 1);
+			aciertos = RespuestasCorrectas + 1;
+			setRespuestasCorrectas(aciertos);
 		}
 		if (indice < preguntas.length - 1) {
 			setIndice(indice + 1);
 		} else {
 			setJuegoTerminado(true);
+			enviarHistorial(aciertos);
 		}
 	};
 
