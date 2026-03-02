@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "nombreJugador": "JugadorPrueba",
+    "aciertos": 7,
+    "estado": "ganado"
+  }
+]

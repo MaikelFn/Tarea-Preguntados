@@ -9,6 +9,19 @@ const PORT = 3000;
 
 app.use(cors());
 
+
+const guardarHistorial = async (nombreJugador, aciertos, estado) => {
+    const nuevaPartida = {
+        nombreJugador,
+        aciertos,
+        estado
+    };
+
+    historial.push(nuevaPartida);
+
+    await fspromises.writeFile(new URL("./data/historial.json", import.meta.url), JSON.stringify(historial, null, 2), "utf-8");
+};
+
 const obtenerPreguntas = (list) => {
     const copia = list.slice();
     const listaPreguntas = [];
@@ -24,7 +37,12 @@ const obtenerPreguntas = (list) => {
 
 app.get("/preguntas", (req, res) => {
     res.json(obtenerPreguntas(preguntas));
-    connsole.log("Preguntas enviadas");
+    console.log("Preguntas enviadas");
+});
+
+app.get("/probar-historial", async (req, res) => {
+    await guardarHistorial("JugadorPrueba", 7, "ganado");
+    res.json(historial);
 });
 
 app.listen(PORT);
