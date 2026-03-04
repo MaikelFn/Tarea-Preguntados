@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "nombreJugador": "Maikel",
+    "aciertos": 8,
+    "estado": "ganado"
+  }
+]
