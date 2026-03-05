@@ -3,5 +3,10 @@
     "nombreJugador": "Maikel",
     "aciertos": 8,
     "estado": "ganado"
+  },
+  {
+    "nombreJugador": "aguacate",
+    "aciertos": 6,
+    "estado": "ganado"
   }
 ]

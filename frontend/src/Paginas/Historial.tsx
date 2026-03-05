@@ -39,15 +39,17 @@ export default function Historial(props: HistorialProps) {
 			{partidas.length === 0 ? (
 				<p>No hay partidas</p>
 			) : (
-				<ul>
-					{partidas.map((partida, i) => (
-						<li key={i}>
-							<div>Jugador: {partida.nombreJugador}</div>
-							<div>Aciertos: {partida.aciertos}/10</div>
-							<div>Estado: {partida.estado}</div>
-						</li>
-					))}
-				</ul>
+				<div className="historial-scroll-container">
+					<ul>
+						{partidas.map((partida, i) => (
+							<li key={i}>
+								<div>Jugador: {partida.nombreJugador}</div>
+								<div>Aciertos: {partida.aciertos}/10</div>
+								<div>Estado: {partida.estado}</div>
+							</li>
+						))}
+					</ul>
+				</div>
 			)}
 
 			<Boton texto="Volver al inicio" onClick={() => props.cambiarPagina("inicio")} />
