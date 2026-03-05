@@ -1,14 +1,25 @@
 import Boton from "../Componetes/Boton";
 import "../App.css";
 
+/**
+ * Propiedades de la pantalla de inicio.
+ * - `nombre`: valor actual del input de nombre.
+ * - `setNombre`: actualiza el nombre ingresado por el usuario.
+ * - `cambiarPagina`: navega entre inicio, juego e historial.
+ */
 type InicioProps = {
 	nombre: string;
 	setNombre: (nombre: string) => void;
 	cambiarPagina: (pagina: "juego" | "historial") => void;
 };
 
+/**
+ * Pantalla inicial del juego.
+ * Solicita el nombre del jugador y permite ir al juego o al historial.
+ */
 export default function Inicio(props: InicioProps) {
 
+	// Valida que exista nombre antes de empezar la partida.
 	const BotonIniciar = () => {
 		if (!props.nombre) {
 			alert("Por favor, escribe tu nombre para iniciar.");
@@ -18,6 +29,7 @@ export default function Inicio(props: InicioProps) {
 		props.cambiarPagina("juego");
 	};
 
+	// Cambia a la pagina de historial al hacer clic.
 	const BotonHistorial = () => {
 		props.cambiarPagina("historial");
 	};

@@ -1,1 +1,15 @@
 # Tarea-Preguntados
+
+**Nombre del Curso:** Lenguajes de Programación
+
+**Semestre y Año Lectivo:** Primer Semestre del 2026
+
+**Nombre del Estudiante:** Maikel Flores Navarro
+
+**Número de Carnet:** 2024148346
+
+**Número de Tarea:** Tarea 1
+
+**Fecha de Entrega:** domingo 8 de marzo de 2026
+
+**Estatus de Entrega:** Buena

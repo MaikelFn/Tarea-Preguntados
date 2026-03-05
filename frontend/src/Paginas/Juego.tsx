@@ -2,30 +2,46 @@ import { useEffect, useState } from "react";
 import FramePregunta from "../Componetes/FramePregunta";
 import Boton from "../Componetes/Boton";
 
+/**
+ * Representa una opcion de respuesta disponible para una pregunta.
+ */
 type Respuesta = {
 	texto: string;
 	correcto: boolean;
 }
 
+/**
+ * Modelo de pregunta recibido desde el backend.
+ */
 type Pregunta = {
 	pregunta: string;
 	respuestas: Respuesta[];
 }
 
+/**
+ * Propiedades de la pantalla de juego.
+ * - `nombre`: nombre del jugador actual.
+ * - `cambiarPagina`: callback de navegacion entre pantallas.
+ */
 type JuegoProps = {
 	nombre: string;
 	cambiarPagina: (pagina: string) => void;
 }
 
+/**
+ * Pantalla principal del juego.
+ * Carga preguntas, contabiliza aciertos y guarda el resultado al finalizar.
+ */
 export default function Juego(props: JuegoProps) {
 	const [preguntas, setPreguntas] = useState<Pregunta[]>([]);
 	const [indice, setIndice] = useState(0);
 	const [RespuestasCorrectas, setRespuestasCorrectas] = useState(0);
 	const [juegoTerminado, setJuegoTerminado] = useState(false);
 
+	// Envia el resultado final de la partida al backend para guardarlo en historial.
 	const enviarHistorial = (aciertos: number) => {
 		let estado = "perdido";
-		if (aciertos >= 5) {
+		if (aciertos >= 6) {
 			estado = "ganado";
 		}
 		fetch("http://localhost:3000/guardar-historial", {
@@ -42,11 +58,13 @@ export default function Juego(props: JuegoProps) {
 	};
 
 	useEffect(() => {
+		// Carga las preguntas cuando la pantalla se monta por primera vez.
 		fetch("http://localhost:3000/preguntas")
 			.then(respuesta => respuesta.json())
 			.then(datos => setPreguntas(datos));
 	}, []);
 
+	// Mientras no exista pregunta para el indice actual, se muestra estado de carga.
 	if (!preguntas[indice]) {
 		return <div>Cargando</div>;
 	}
@@ -57,6 +75,7 @@ export default function Juego(props: JuegoProps) {
 		esCorrecto: respuesta.correcto
 	}));
 
+	// Procesa la respuesta elegida, avanza de pregunta y finaliza la partida si corresponde.
 	const RespuestaSeleccionada = (esCorrecto: boolean) => {
 		let aciertos = RespuestasCorrectas;
 		if (esCorrecto) {

@@ -1,20 +1,32 @@
 import { useEffect, useState } from "react";
 import Boton from "../Componetes/Boton";
 
+/**
+ * Representa una partida guardada por el backend.
+ */
 type Partida = {
 	nombreJugador: string;
 	aciertos: number;
 	estado: "ganado" | "perdido";
 };
 
+/**
+ * Propiedades de la pantalla Historial.
+ * Permite volver a la pantalla de inicio.
+ */
 type HistorialProps = {
 	cambiarPagina: (pagina: "inicio") => void;
 };
 
+/**
+ * Pantalla que consulta y muestra el historial de partidas.
+ * Si no hay datos, muestra un estado vacio.
+ */
 export default function Historial(props: HistorialProps) {
 	const [partidas, setPartidas] = useState<Partida[]>([]);
 
 	useEffect(() => {
+		// Carga el historial al montar la pantalla.
 		fetch("http://localhost:3000/historial")
 			.then(respuesta => respuesta.json())
 			.then(datos => setPartidas(datos));
