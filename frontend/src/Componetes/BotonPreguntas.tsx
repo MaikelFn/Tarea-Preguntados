@@ -1,3 +1,9 @@
+/**
+ * Propiedades del componente BotonPreguntas.
+ * - `texto`: contenido visible del botón de respuesta.
+ * - `onClick`: función ejecutada al seleccionar la respuesta.
+ * - `EsCorrecto`: indica si la opción representada es correcta.
+ */
 type BotonPreguntasProps = {
   texto: string;
   onClick: () => void;
@@ -5,6 +11,9 @@ type BotonPreguntasProps = {
 };
 
 
+/**
+ * Botón reutilizable para mostrar una opción de respuesta en el juego.
+ */
 export default function BotonPreguntas(props: BotonPreguntasProps) {
   return (
     <button

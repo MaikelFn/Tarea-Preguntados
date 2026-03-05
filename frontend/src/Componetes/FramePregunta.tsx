@@ -1,11 +1,21 @@
 import BotonPreguntas from "./BotonPreguntas"
 
+/**
+ * Propiedades del componente FramePregunta.
+ * - `pregunta`: enunciado principal a mostrar.
+ * - `opciones`: lista de respuestas disponibles (texto + bandera de corrección).
+ * - `onRespuesta`: callback que recibe si la opción elegida es correcta.
+ */
 type FramePreguntaProps = {
     pregunta: string;
     opciones: { texto: string; esCorrecto: boolean }[];
     onRespuesta: (esCorrecto: boolean) => void;
 };
 
+/**
+ * Contenedor visual de una pregunta del juego.
+ * Renderiza hasta 3 botones de respuesta y delega el resultado al callback padre.
+ */
 export default function FramePregunta(props: FramePreguntaProps) {
     const [op1, op2, op3] = props.opciones;
 
