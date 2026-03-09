@@ -8,5 +8,15 @@
     "nombreJugador": "aguacate",
     "aciertos": 6,
     "estado": "ganado"
+  },
+  {
+    "nombreJugador": "Maikel",
+    "aciertos": 6,
+    "estado": "ganado"
+  },
+  {
+    "nombreJugador": "Maikel",
+    "aciertos": 2,
+    "estado": "perdido"
   }
 ]
